@@ -31,7 +31,7 @@
                 <input type="text" name="role" id="role" class="form-control" value="{{ $user->role }}">
             </div>  
             <div class="form-group">
-                <input type="submit" class="btn btn-info btn-sm" value="Lưu sản phẩm">                <input type="submit" class="btn btn-info btn-sm" value="Cập Nhập">
+                <input type="submit" class="btn btn-info btn-sm" value="Lưu sản phẩm">   <input type="submit" class="btn btn-info btn-sm" value="Cập Nhập">
 
             </div>
 
