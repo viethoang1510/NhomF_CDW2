@@ -94,7 +94,8 @@ class BannerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $banner =  Banner::find($id);
+        return view('banner.edit',compact('banner'));
     }
 
     /**
@@ -106,7 +107,17 @@ class BannerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $banner =  Banner::find($id);
+        $des= 'public/upload';
+        $imgname1 = $request->file('slide1')->getClientOriginalName();
+        $request->file('slide1')->move($des,$imgname1);
+        $banner->slide1 = $request->slide1;
+        $banner->slide1 = $imgname1;
+        $banner->save();
+        $slide = DB::table('banner')->select('slide')->first();
+        $slides = DB::table('banner')->get();
+        return view('banner.index',compact('banner','slides'));
     }
 
     /**

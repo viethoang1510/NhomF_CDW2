@@ -59,6 +59,9 @@ Route::get('/detail','AdminController@detailuser')->name('admin.detailuser');
 Route::get('/listuser', 'AdminController@listuser')->name('admin.listuser');
 
 Route::get('/banner', 'Admin\BannerController@index')->name('banner.index');
+Route::get('/update_banner/{id}', 'Admin\BannerController@update')->name('banner.update');
+Route::post('/update_banner/{id}', 'Admin\BannerController@update')->name('banner.update');
+Route::get('/bn/{id}', 'Admin\BannerController@edit')->name('banner.edit');
 Route::get('/', function () {
     return view('home');
 });
