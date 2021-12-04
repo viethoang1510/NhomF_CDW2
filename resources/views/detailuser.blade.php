@@ -1,4 +1,3 @@
-
 @extends('pages.customer.main')
 @section('content')
 <div class="row">
@@ -55,7 +54,11 @@
         </div>
     </div>
     <div class="col-md-6">
-
+        @if(session('tub'))
+        <div class="alert alert-success" role="alert">
+            {{session('tub')}}
+        </div>
+        @endif
         @if(session('sub'))
         <div class="alert alert-success" role="alert">
             {{session('sub')}}
@@ -70,7 +73,7 @@
 
                         <div class="col-sm-10 mt-3">
                             <form class="form-horizontal row-border" style="width: 110%;margin-left: 20px;"
-                                action="{{route('password.update')}}" method="POST">
+                                action="{{route('test')}}" method="POST">
                                 @csrf
                                 <div class="form-group">
                                     <label class="col-md-4 control-label"

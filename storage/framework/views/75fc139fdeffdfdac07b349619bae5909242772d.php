@@ -24,5 +24,6 @@
    </a>
  </div>
  <!-- kết thúc slide -->
+ <a href="<?php echo e(route('test')); ?>">Gửi mail</a>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('pages.customer.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\Web_nhomF_3\resources\views/home.blade.php ENDPATH**/ ?>

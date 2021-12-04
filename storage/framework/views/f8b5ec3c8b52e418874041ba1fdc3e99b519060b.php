@@ -1,5 +1,4 @@
 
-
 <?php $__env->startSection('content'); ?>
 <div class="row">
     <div class="col-md-6">
@@ -56,7 +55,12 @@
         </div>
     </div>
     <div class="col-md-6">
+        <?php if(session('tub')): ?>
+        <div class="alert alert-success" role="alert">
+            <?php echo e(session('tub')); ?>
 
+        </div>
+        <?php endif; ?>
         <?php if(session('sub')): ?>
         <div class="alert alert-success" role="alert">
             <?php echo e(session('sub')); ?>
@@ -72,7 +76,7 @@
 
                         <div class="col-sm-10 mt-3">
                             <form class="form-horizontal row-border" style="width: 110%;margin-left: 20px;"
-                                action="<?php echo e(route('password.update')); ?>" method="POST">
+                                action="<?php echo e(route('test')); ?>" method="POST">
                                 <?php echo csrf_field(); ?>
                                 <div class="form-group">
                                     <label class="col-md-4 control-label"
@@ -131,5 +135,4 @@
 
 
 <?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('pages.customer.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\Web_nhomF_3\resources\views/detailuser.blade.php ENDPATH**/ ?>
