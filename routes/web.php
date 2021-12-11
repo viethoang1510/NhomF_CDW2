@@ -35,7 +35,8 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/', function () {
     return view('home');
 });
-
+ Route::get('test-email','HomeController@testEmail')->name('test');
+ Route::post('test-email','HomeController@testEmail')->name('test');
 /**
  * Hoang 
  */
